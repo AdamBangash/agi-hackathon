@@ -1,0 +1,26 @@
+[project]
+name = "gemma-thor"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ainur@ainur.com", email = "ainur@ainur-thinkpad" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "mediapipe>=1.1.1",
+    "numpy>=2.5.4",
+    "opencv-python>=5.0.0.93",
+    "unitree-sdk2py",
+]
+
+[project.scripts]
+gemma-thor = "gemma_thor:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+unitree-sdk2py = { path = "/home/ainur/unitree_sdk2_python", editable = true }
+
